@@ -5,7 +5,9 @@ import io.swagger.v3.oas.models.info.Info
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 
+/** OpenAPI(Swagger) 설정용 Spring Configuration 클래스 */
 @Configuration
+
 class OpenApiConfig {
 
     @Bean

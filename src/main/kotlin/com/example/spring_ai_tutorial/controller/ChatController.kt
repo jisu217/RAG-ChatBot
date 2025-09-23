@@ -12,11 +12,7 @@ import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 
-/**
- * Chat API 컨트롤러
- *
- * LLM API를 통해 채팅 기능을 제공합니다.
- */
+/** Chat API 컨트롤러 + LLM API를 통해 채팅 기능을 제공 */
 @RestController
 @RequestMapping("/api/v1/chat")
 @Tag(name = "Chat API", description = "OpenAI API를 통한 채팅 기능")
@@ -25,9 +21,7 @@ class ChatController(
 ) {
     private val logger = KotlinLogging.logger {}
 
-    /**
-     * 사용자의 메시지를 받아 OpenAI API로 응답 생성
-     */
+    /** 사용자의 메시지를 받아 OpenAI API로 응답 생성 */
     @Operation(
         summary = "LLM 채팅 메시지 전송",
         description = "사용자의 메시지를 받아 OpenAI API를 통해 응답을 생성합니다."

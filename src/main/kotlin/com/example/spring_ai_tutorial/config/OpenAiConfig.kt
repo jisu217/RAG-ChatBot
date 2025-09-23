@@ -6,9 +6,7 @@ import org.springframework.beans.factory.annotation.Value
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 
-/**
- * OpenAI API 설정
- */
+/** OpenAI API 설정용 Spring Configuration 클래스 */
 @Configuration
 class OpenAiConfig {
     private val logger = KotlinLogging.logger {}
@@ -16,9 +14,7 @@ class OpenAiConfig {
     @Value("\${spring.ai.openai.api-key}")
     private lateinit var apiKey: String
 
-    /**
-     * OpenAI API 클라이언트 빈 등록
-     */
+    /** OpenAI API 클라이언트 빈 등록 */
     @Bean
     fun openAiApi(): OpenAiApi {
         logger.debug { "OpenAI API 클라이언트 초기화" }
