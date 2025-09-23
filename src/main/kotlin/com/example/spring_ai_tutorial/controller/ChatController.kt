@@ -88,6 +88,7 @@ class ChatController(
     }
 }
 
+/** ChatRequest 데이터 모델 - 사용자의 질의(query)와 모델(model) 정보를 담는 요청 객체 */
 @Schema(description = "채팅 요청 데이터 모델")
 data class ChatRequest(
     @Schema(description = "사용자 질문", example = "안녕하세요")
@@ -97,6 +98,7 @@ data class ChatRequest(
     val model: String = "gpt-3.5-turbo"
 )
 
+/** ApiResponse 데이터 모델, API 응답 형식 통일 - 성공 여부(success), 데이터(data), 오류 메시지(error) 포함 */
 @Schema(description = "API 응답 포맷")
 data class ApiResponse<T>(
     @Schema(description = "요청 처리 성공 여부")

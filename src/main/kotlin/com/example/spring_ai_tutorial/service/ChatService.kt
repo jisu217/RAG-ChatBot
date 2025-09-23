@@ -7,23 +7,18 @@ import org.springframework.ai.chat.model.ChatResponse
 import org.springframework.ai.openai.api.OpenAiApi
 import org.springframework.stereotype.Service
 
-/**
- * OpenAI API를 사용하여 질의응답을 수행하는 서비스
- */
+/** OpenAI API를 사용하여 질의응답을 수행하는 서비스 */
 @Service
 class ChatService(
     private val openAiApi: OpenAiApi
 ) {
     private val logger = KotlinLogging.logger {}
 
-    /**
-     * OpenAI 챗 API를 이용하여 응답을 생성합니다.
-     *
+    /** OpenAI 챗 API를 이용하여 응답을 생성합니다.
      * @param userInput 사용자 입력 메시지
      * @param systemMessage 시스템 프롬프트
      * @param model 사용할 LLM 모델명
-     * @return 챗 응답 객체, 오류 시 null
-     */
+     * @return 챗 응답 객체, 오류 시 null */
     suspend fun openAiChat(
         userInput: String,
         systemMessage: String,
